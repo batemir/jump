@@ -1,4 +1,4 @@
-package com.skippingrope.generated;
+package com.jump.generated;
 
 import java.util.Arrays;
 import java.util.List;

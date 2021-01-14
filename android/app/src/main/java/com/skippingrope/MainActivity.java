@@ -1,4 +1,4 @@
-package com.skippingrope;
+package com.jump;
 
 import android.os.Bundle;
 

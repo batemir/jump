@@ -1,9 +1,9 @@
 {
-  "name": "skipping-rope",
-  "displayName": "skipping-rope",
+  "name": "jump",
+  "displayName": "jump",
   "expo": {
-    "name": "skipping-rope",
-    "slug": "skipping-rope",
+    "name": "jump",
+    "slug": "jump",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
