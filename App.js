@@ -1,13 +1,14 @@
 import 'react-native-gesture-handler';
-import AppLoading from 'expo-app-loading'
-import * as Font from 'expo-font'
+import AppLoading from 'expo-app-loading';
+import * as Font from 'expo-font';
 import React, { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import Main from './pages/main';
-import Login from './pages/login';
+import Main from './pages/Main';
+import Login from './pages/Login';
 
 const Drawer = createDrawerNavigator();
+const pathToFonts = './assets/fonts/';
 
 export default function App() {
   const [isFontsLoaded, setFontsLoaded] = useState(false);
@@ -15,8 +16,9 @@ export default function App() {
   useEffect(() => {
     if (!isFontsLoaded) {
       Font.loadAsync({
-        'Montserrat-ExtraBoldItalic': require('./assets/fonts/Montserrat-ExtraBoldItalic.ttf'),
-        'Montserrat-SemiBold': require('./assets/fonts/Montserrat-SemiBold.ttf'),
+        'Montserrat-ExtraBoldItalic': require(`${pathToFonts}Montserrat-ExtraBoldItalic.ttf`),
+        'Montserrat-Regular': require(`${pathToFonts}Montserrat-Regular.ttf`),
+        'Montserrat-SemiBold': require(`${pathToFonts}Montserrat-SemiBold.ttf`),
       }).then(() => setFontsLoaded(true));
     }
   }, [setFontsLoaded, isFontsLoaded]);
